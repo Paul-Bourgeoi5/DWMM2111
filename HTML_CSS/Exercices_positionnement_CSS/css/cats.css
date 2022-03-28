@@ -1,0 +1,36 @@
+header{
+    background-color: rgb(230, 75, 60);
+    color: white;
+    text-align: center;
+    margin: 0px;
+    padding: 20px 0;
+}
+
+main {
+    background-color: rgb(235, 240, 240);
+}
+
+.container {
+    margin: 0 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cat{
+    width: 22%;
+    margin: 10px 10px 0px 10px;
+    min-width: 250px;
+    background-color: white;
+}
+
+.cat img {
+    width: 100%;
+    min-height: 200px;
+    max-height: 200px;
+}
+
+.cat h1 {
+    margin: 3px;
+}

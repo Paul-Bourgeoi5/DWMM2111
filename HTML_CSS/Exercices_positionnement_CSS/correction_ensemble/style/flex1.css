@@ -1,0 +1,114 @@
+:root {
+    --couleur_bleu: #CCDDFF;
+    --couleur_orange: #FFDDCC;
+    --couleur_vert: #CCFFDD;
+}
+.supercontainer{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.supercontainer > header{
+    font-size: 1em;
+    flex-grow: 3;
+}
+
+/*Selection de header et de footer pour la couleur de fond*/
+.supercontainer > header, .supercontainer > footer{
+    text-align: center;
+    background-color: var(--couleur_bleu);
+}
+
+.supercontainer > main {
+    flex-grow: 12;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* > permet de séléctionner les 'aside' enfants directs de main et non pas les petits enfants   */
+.supercontainer > main > aside {
+    background-color: var(--couleur_orange);
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 250px;
+}
+
+.items ul {
+    list-style: none;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.items li {
+    line-height: 3em;
+}
+
+.items a {
+    display: block;
+    background-color: white;
+    margin-bottom: 15px;
+    padding: 0% 5%;
+}
+
+
+.supercontainer > main > section {
+    background-color: var(--couleur_vert);
+    flex: 5 ;
+}
+
+.supercontainer section > h2 {
+    margin-left: 15px;
+}
+
+.articlescontainer {
+    margin: 5px 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.articlescontainer > article {
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 10px;
+    width: 450px;
+}
+
+
+.supercontainer > footer {
+    flex-grow: 1; 
+}
+
+@media screen and (max-width: 1240px) {
+    .supercontainer > main {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1014px) {
+    .articlescontainer > article {
+        width:600px;
+        min-width: 360px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .articlescontainer > article {
+        width:100%;
+        border-left: 0px;
+        border-right: 0px;
+        border-radius: 0px;
+    }
+    
+    .articlescontainer {
+        margin: 0px 0px;
+        
+    }
+}

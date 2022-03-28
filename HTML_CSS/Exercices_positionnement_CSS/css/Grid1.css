@@ -1,0 +1,110 @@
+:root{
+    --blue_color: #BBCCFF;
+}
+
+body {
+    margin: 0px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 6fr 1fr;
+    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-areas: 
+    "topleft topleft topright"
+    "bottomleft middle middle"
+    "bottomleft bottomeright bottomeright";
+    gap: 5px;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 1fr 4fr 4fr;
+    grid-template-rows: 60px auto auto auto;
+    grid-template-areas:
+    ". . ."
+    ". sec1 sec2"
+    ". sec3 sec4"
+    ". sec5 sec6";
+    gap: 3px;
+} 
+
+article > section {
+    background-color: white;
+}
+
+/* footer {
+    grid-column: 2 / 4;
+    grid-row: 3;
+} */
+
+header {
+    grid-area: topleft;
+}
+.ads {
+    grid-area: topright;
+}
+nav {
+    grid-area: bottomleft;
+}
+article {
+    grid-area: middle;
+}
+footer {
+    grid-area: bottomeright;
+}
+
+header, .ads, nav, article, footer {
+    background-color: var(--blue_color);
+}
+
+section p {
+    font-size: smaller;
+}
+
+.section1 {
+    grid-area: sec1;
+}
+.section2 {
+    grid-area: sec2;
+}
+.section3 {
+    grid-area: sec3;
+}
+.section4 {
+    grid-area: sec4;
+}
+.section5 {
+    grid-area: sec5;
+}
+.section6 {
+    grid-area: sec6;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(5, 1fr) ;
+        grid-template-areas: 
+        "topleft"
+        "topright"
+        "bottomleft"
+        "middle"
+        "bottomeright";
+    }
+    article > h2{
+        grid-area: titre;
+    }
+    article {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(7, auto);
+        grid-template-areas: 
+        "titre"
+        "sec1"
+        "sec2"
+        "sec3"
+        "sec4"
+        "sec5"
+        "sec6";
+        gap: 3px;
+    } 
+}
