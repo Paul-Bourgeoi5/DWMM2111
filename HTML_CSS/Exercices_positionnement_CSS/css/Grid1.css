@@ -3,53 +3,60 @@
 }
 
 body {
-    margin: 0px;
-    height: 100vh;
+    margin: 1%;
+    height: 95vh;
     display: grid;
     grid-template-columns: 2fr 6fr 1fr;
-    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: 
     "topleft topleft topright"
     "bottomleft middle middle"
     "bottomleft bottomeright bottomeright";
     gap: 5px;
+    font-size: 10px;
+}
+
+header {
+    grid-area: topleft;
+}
+
+h1, h2 {
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 10px;
+}
+.ads {
+    grid-area: topright;
+}
+
+nav {
+    grid-area: bottomleft;
+    font-size: 10px;
 }
 
 article {
+    grid-area: middle;
     display: grid;
-    grid-template-columns: 1fr 4fr 4fr;
-    grid-template-rows: 60px auto auto auto;
+    grid-template-columns: 1fr 4fr 4fr 20px;
+    grid-template-rows: 60px auto auto auto 20px;
     grid-template-areas:
-    ". . ."
-    ". sec1 sec2"
-    ". sec3 sec4"
-    ". sec5 sec6";
+    ". . . ."
+    ". sec1 sec2 ."
+    ". sec3 sec4 ."
+    ". sec5 sec6 ."
+    ". . . .";
     gap: 3px;
+    overflow-y: scroll;
 } 
 
 article > section {
     background-color: white;
 }
 
-/* footer {
-    grid-column: 2 / 4;
-    grid-row: 3;
-} */
-
-header {
-    grid-area: topleft;
-}
-.ads {
-    grid-area: topright;
-}
-nav {
-    grid-area: bottomleft;
-}
-article {
-    grid-area: middle;
-}
 footer {
     grid-area: bottomeright;
+    font-size: smaller;
+    font-weight: bold;
 }
 
 header, .ads, nav, article, footer {
@@ -80,9 +87,13 @@ section p {
 }
 
 @media screen and (max-width: 768px) {
+    :root{
+        --blue_color: #CCFFBB;
+    }
+
     body {
         grid-template-columns: auto;
-        grid-template-rows: repeat(5, 1fr) ;
+        grid-template-rows: 1fr 1fr 1fr 5fr 1fr ;
         grid-template-areas: 
         "topleft"
         "topright"
