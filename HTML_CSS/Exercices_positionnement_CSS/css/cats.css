@@ -1,3 +1,7 @@
+body{
+    margin: 0px;
+}
+
 header{
     background-color: rgb(230, 75, 60);
     color: white;
@@ -11,7 +15,7 @@ main {
 }
 
 .container {
-    margin: 0 10%;
+    margin: 0px 10%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -20,7 +24,7 @@ main {
 
 .cat{
     width: 22%;
-    margin: 10px 10px 0px 10px;
+    margin: 15px 10px 15px 10px;
     min-width: 250px;
     background-color: white;
 }
@@ -33,4 +37,8 @@ main {
 
 .cat h1 {
     margin: 3px;
+}
+
+footer {
+    text-align: center;
 }
