@@ -1,0 +1,81 @@
+/* Définitions de variables globales. */
+:root{
+    --largeur_div_petit: 30%;
+    --largeur_div_moyen: 63.26%;
+    --largeur_div_grand: 100%;
+}
+
+* {
+    margin: 0px;
+}
+
+html,body{
+    height: 100%;
+}
+
+/* Flexbox principale englobant : div1 et une section contenant le reste du code */
+body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.div1 {
+    flex:1; /* permet d'attribuer une taille à notre div. */
+}
+
+/* .section1 est notre seconde flexbox qui englobe la div2 et le reste du html */
+.section1{
+    flex: 4; /* Attribue une taille à .section1.  4 fois supérieure à celle de .div1 dans notre première flexbox */
+    display: flex; /* définir .section1 comme seconde flexbox. */
+}
+
+.div2 {
+    flex: 1; /* défini la taille de .div2 dans la seconde flexbox. */
+}
+
+/* .section2 est notre troisième flexbox. */
+.section2{
+    flex: 3; /* Défini la taille de .section2 dans la seconde flexbox : 3 fois plus grand que .div2. */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Selection des div dont le nom de classe commence par "div" */
+div[class^="div"] {
+    margin: 2px;
+    background-color:#CCCC33 ;
+}
+
+/* On veut que les class divPetit prennent peu de place dans la flexbox */
+.divPetit {
+    flex: 1 1 var(--largeur_div_petit);
+}
+
+/* On veut que les class divMoyen prennent environs la moitié de la largeur d'une ligne dans la flexbox */
+.divMoyen {
+    flex: 1 1 var(--largeur_div_moyen);
+}
+
+/* On veut que les class divGrand prennent toute la largeur d'une ligne dans la flexbox */
+.divGrand {
+    flex: 1 1 var(--largeur_div_grand);
+}
+
+
+@media screen and (max-width: 600px) {
+    /* Modification de la largeur des divs. */
+    :root{
+        /* changement des valeurs des variables sur mobiles. */
+        --largeur_div_petit: 48%;
+        --largeur_div_moyen: 48%;
+        --largeur_div_grand: 100%;
+    }
+    
+    /* Passage de la seconde flexbox en affichage en colonne. */
+    .section1 {
+        flex-direction: column;
+    }
+
+
+}
