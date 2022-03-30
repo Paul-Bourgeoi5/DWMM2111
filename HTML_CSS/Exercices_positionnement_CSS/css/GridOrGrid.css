@@ -1,0 +1,86 @@
+:root {
+    --jaune: #CCCC33
+}
+
+* {
+    margin: 0px;
+}
+html, body{
+    height: 100%;
+}
+.wrapper{
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    "one one one one"
+    "two three four four"
+    "two five five six"
+    "two seven eight nine"
+    "two ten ten ten";
+}
+
+section {
+    background-color: var(--jaune);
+    color: white;
+    margin: 5px;
+}
+
+.section1 {
+    grid-area: one;
+}
+
+.section2 {
+    grid-area: two;
+}
+
+.section3 {
+    grid-area: three;
+}
+
+.section4 {
+    grid-area: four;
+}
+
+.section5 {
+    grid-area: five;
+}
+
+.section6 {
+    grid-area: six;
+}
+
+.section7 {
+    grid-area: seven;
+}
+
+.section8 {
+    grid-area: eight;
+}
+
+.section9 {
+    grid-area: nine;
+}
+
+.section10 {
+    grid-area: ten;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper{
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "one one"
+        "two three"
+        "two four"
+        "two five"
+        "six seven"
+        "eight nine"
+        "ten ten";
+    }
+
+    section {
+        margin: 2px;
+    }
+}
