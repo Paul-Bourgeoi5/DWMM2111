@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire trop beau</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <form action="form.html" method="post">
+        <h1>Service request form</h1>
+        <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+
+        <section>
+            <h2>User information</h2>
+            <ul>
+                <li>
+                    <p>
+                        <label for="name" class="textlabel">Name
+                            <strong><abbr title="required">*</abbr></strong>
+                        </label>
+                        <input type="text" id="name" name="username">
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <label for="phone" class="textlabel">Phone</label>
+                        <input type="tel" id="phone" name="phonenumber">
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <label for="mail" class="textlabel">E-mail</label>
+                        <input type="email" name="usermail" id="mail">
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="special">
+            <h2>Service type</h2>
+            <fieldset>
+                <legend>Which service do you require ?</legend>
+                <ul>
+                    <li>
+                        <input type="radio" name="service" id="plumbing">
+                        <label for="plumbing">Plumbing</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="service" id="electricity">
+                        <label for="electricity">Electricity</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="service" id="painting">
+                        <label for="painting">Painting</label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>Wich other service do you need ?</legend>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="otherservice" id="architect">
+                        <label for="architect">Architect</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="otherservice" id="disinfection">
+                        <label for="disinfection">Disinfection</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="otherservice" id="extermination">
+                        <label for="extermination">Rat extermination</label>
+                    </li>
+                </ul>
+            </fieldset>
+        </section>
+
+        <section>
+            <h2>Service information</h2>
+            <ul>
+                <li>
+                    <p>
+                        <label for="date" class="textlabel">Date/Time
+                            <strong><abbr title="required">*</abbr></strong>
+                        </label>
+                        <input type="date" id="date" name="servicedate">
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <label for="place" class="textlabel">Place
+                            <strong><abbr title="required">*</abbr></strong>
+                        </label>
+                        <select name="serviceplace" id="place">
+                            <option value="default">Select One</option>
+                            <option value="main">Main office (Paris)</option>
+                            <option value="technical">Technical center (Lille)</option>
+                            <option value="logistic">Logistic center (Amiens)</option>
+                        </select>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <label for="other" class="textlabel">Other needs</label>
+                        <input type="text" id="other" name="servicedate">
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <label for="special" class="textlabel">Special Instructions</label>
+                        <textarea name="specialinstruction" id="special"></textarea>
+                    </p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <p>
+                <button type="submit">Submit</button>
+            </p>
+        </section>
+
+
+        
+    </form>
+</body>
+</html>

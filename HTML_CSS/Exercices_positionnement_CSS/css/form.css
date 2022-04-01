@@ -1,0 +1,70 @@
+form {
+    margin: 0 auto;
+    width: 500px;
+    padding: 1em;
+    border: 2px solid #a95454;
+    border-radius: 3em 10%;
+    background-color: #33AAFF;
+}
+
+h1, form > p {
+    text-align: center;
+}
+
+section > *:nth-child(n+2){
+    margin : 0 50px;
+}
+
+section.special > * {
+    margin: 0;
+}
+
+section  ul {
+    list-style: none;
+    padding: 0;
+    margin:0;
+}
+
+form li + li {
+    margin-top: 1em;
+}
+
+.textlabel {
+    display: inline-block;
+    width: 120px;
+    text-align: left;
+}
+
+input, textarea, select {
+    float: right;
+    width: 200px;
+    box-sizing: border-box;
+    border: 1px solid #333333;
+}
+
+fieldset {
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+fieldset ul  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+fieldset ul li {
+    flex: 1 auto;
+    display: flex;
+    margin: 0;
+    width: 200px;
+}
+
+fieldset ul li input {
+    flex: 1 1 auto;
+    width: auto;
+}
+
+fieldset ul li label {
+    flex: 1 1 auto;
+}
