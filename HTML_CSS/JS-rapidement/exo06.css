@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(187, 191, 250);
+}
+fieldset{
+    
+    border: 5px white solid;
+    background-color: rgb(125, 182, 162);
+    width: 43%;
+    height: auto;
+    padding: 0px;
+}
+div{
+    margin: 1%;
+}
+hr{
+    border-color: black;
+    max-width: 204px;
+    margin-right: 0px;
+    margin-top: 20px;
+}
+
+#prixtotaux{
+    text-align: right;
+    margin-right: 30px;
+    
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="css/myFirstForm.css">
+</head>
+<body>
+    <form action="myFirstForm.html" method="post">
+        <ul>
+         <li>
+           <label for="name">Name:</label>
+           <input type="text" id="name" name="user_name">
+         </li>
+         <li>
+           <label for="mail">E-mail:</label>
+           <input type="email" id="mail" name="user_email">
+         </li>
+         <li>
+           <label for="msg">Message:</label>
+           <textarea id="msg" name="user_message"></textarea>
+         </li>
+         <li class="button">
+            <button type="submit">Send your message</button>
+          </li>
+        </ul>
+
+
+
+        <fieldset>
+            <legend>Fruit juice size</legend>
+            <p>
+              <input type="radio" name="size" id="size_1" value="small">
+              <label for="size_1">Small</label>
+            </p>
+            <p>
+              <input type="radio" name="size" id="size_2" value="medium">
+              <label for="size_2">Medium</label>
+            </p>
+            <p>
+              <input type="radio" name="size" id="size_3" value="large">
+              <label for="size_3">Large</label>
+            </p>
+          </fieldset>
+
+
+          <p>
+            <input type="checkbox" id="taste_1" name="taste_cherry" value="cherry">
+            <label for="taste_1">I like cherry</label>
+          </p>
+          <p>
+            <input type="checkbox" id="taste_2" name="taste_banana" value="banana">
+            <label for="taste_2">I like banana</label>
+          </p>
+        </form>
+
+
+
+        <form>
+            <h1>Payment form</h1>
+            <p>
+                Required fields are followed by <strong><abbr title="required">*</abbr></strong>
+            </p>
+            <section>
+                <h2>Contact information</h2>
+                <fieldset>
+                    <legend>Title</legend>
+                    <ul>
+                        <li>
+                            <label for="title_1">
+                                <input type="radio" id="title_1" name="title" value="K"> King
+                            </label>
+                        </li>
+                        <li>
+                            <label for="title_2">
+                                <input type="radio" id="title_2" name="title" value="Q">
+                                Queen
+                            </label>
+                        </li>
+                        <li>
+                            <label for="title_3">
+                                <input type="radio" id="title_3" name="title" value="J">
+                                Joker
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <p>
+                    <label for="name">
+                        <span>Name: </span>
+                        <strong><abbr title="required">*</abbr></strong>
+                    </label>
+                    <input type="text" id="name" name="username">
+                </p>
+                <p>
+                    <label for="mail">
+                        <span>E-mail: </span>
+                        <strong><abbr title="required">*</abbr></strong>
+                    </label>
+                    <input type="email" id="mail" name="usermail">
+                </p>
+                <p>
+                    <label for="pwd">
+                        <span>Password: </span>
+                        <strong><abbr title="required">*</abbr></strong>
+                    </label>
+                    <input type="password" id="pwd" name="password">
+                </p>
+            </section>
+            <section>
+                <h2>Payment information</h2>
+                <p>
+                    <label for="card">
+                        <span>Card type:</span>
+                    </label>
+                    <select id="card" name="usercard">
+                        <option value="visa">Visa</option>
+                        <option value="mc">MasterCard</option>
+                        <option value="amex">American Express</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="number">
+                        <span>Card number:</span>
+                        <strong><abbr title="required">*</abbr></strong>
+                    </label>
+                    <input type="tel" id="number" name="cardnumber">
+                </p>
+                <p>
+                    <label for="expiration">
+                        <span>Expiration date: </span>
+                        <strong><abbr title="required">*</abbr></strong>
+                    </label>
+                    <input type="text" id="expiration" required="true" placeholder="MM/YY"
+            pattern="^(0[1-9]|1[0-2])\/([0-9]{2}$">
+                </p>
+            </section>
+            <section>
+                <p>
+                    <button type="submit">Validate payment</button>
+                </p>
+            </section>
+        </form>
+</body>
+</html>
